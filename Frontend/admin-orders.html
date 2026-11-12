@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Manage Orders - ShopSphere Admin</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ADMIN NAVBAR -->
+    <header class="navbar">
+
+        <h2>ShopSphere Admin</h2>
+
+        <nav>
+            <a href="admin.html">Dashboard</a>
+            <a href="admin-products.html">Manage Products</a>
+            <a href="admin-orders.html">Manage Orders</a>
+            <a href="#" onclick="adminLogout(); return false;">Logout</a>
+        </nav>
+
+    </header>
+
+    <!-- MANAGE ORDERS -->
+    <main class="admin-section">
+
+        <h1>Manage Orders</h1>
+
+        <p>View customer orders and manage delivery status.</p>
+
+        <section class="admin-actions">
+
+            <h2>All Customer Orders</h2>
+
+            <div class="form-group">
+
+                <label for="orderStatusFilter">
+                    Filter Orders by Status
+                </label>
+
+                <select
+                    id="orderStatusFilter"
+                    onchange="filterAdminOrders()">
+
+                    <option value="All">All Orders</option>
+                    <option value="Placed">Placed</option>
+                    <option value="Processing">Processing</option>
+                    <option value="Shipped">Shipped</option>
+                    <option value="Delivered">Delivered</option>
+                    <option value="Cancelled">Cancelled</option>
+
+                </select>
+
+            </div>
+
+            <div id="adminOrdersContainer">
+                <p>Loading orders...</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <h2>ShopSphere</h2>
+        <p>© 2026 ShopSphere. All rights reserved.</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>

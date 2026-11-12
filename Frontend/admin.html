@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | ShopSphere</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <h2 class="logo">ShopSphere Admin</h2>
+
+        <div>
+            <a href="index.html">Store</a>
+            <a href="admin.html">Dashboard</a>
+            <a href="#" onclick="adminLogout()">Logout</a>
+        </div>
+    </header>
+
+    <main class="admin-section">
+
+        <h1>Admin Dashboard</h1>
+        <p>Manage your ShopSphere store.</p>
+
+        <div id="adminMessage"></div>
+
+        <section class="admin-stats">
+
+            <div class="admin-card">
+                <h3>Total Products</h3>
+                <h2 id="totalProducts">0</h2>
+            </div>
+
+            <div class="admin-card">
+                <h3>Total Orders</h3>
+                <h2 id="totalOrders">0</h2>
+            </div>
+
+            <div class="admin-card">
+                <h3>Total Users</h3>
+                <h2 id="totalUsers">0</h2>
+            </div>
+
+        </section>
+
+        <section class="admin-actions">
+            <h2>Management</h2>
+
+            <div class="admin-action-buttons">
+                <button onclick="window.location.href='admin-products.html'">
+                    Manage Products
+                </button>
+
+                <button onclick="window.location.href='admin-orders.html'">
+                    Manage Orders
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 ShopSphere. All rights reserved.</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>

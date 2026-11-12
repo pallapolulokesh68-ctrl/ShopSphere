@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopSphere - Online Shopping</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <header class="navbar">
+
+        <h2 class="logo">ShopSphere</h2>
+
+        <div class="search-box">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search products..."
+                oninput="searchProducts()"
+            >
+            <button onclick="searchProducts()">Search</button>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+            <a href="wishlist.html">Wishlist ❤️</a>
+            <a href="cart.html">Cart 🛒</a>
+            <a href="my-orders.html">My Orders</a>
+            <a href="#" onclick="logout(); return false;">Logout</a>
+        </nav>
+
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="tagline">WELCOME TO SHOPSPHERE</p>
+
+            <h1>Discover Amazing Products at Amazing Prices</h1>
+
+            <p>
+                Your shopping destination, all in one place.
+                Explore our latest collection today.
+            </p>
+
+            <a href="#products" class="shop-btn">
+                Shop Now
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- CATEGORY SECTION -->
+    <section class="categories">
+
+        <h2>Shop By Category</h2>
+
+        <div class="category-list">
+
+            <button onclick="filterCategory('Electronics')">
+                Electronics
+            </button>
+
+            <button onclick="filterCategory('Fashion')">
+                Fashion
+            </button>
+
+            <button onclick="filterCategory('Home')">
+                Home
+            </button>
+
+            <button onclick="filterCategory('Accessories')">
+                Accessories
+            </button>
+
+            <button onclick="filterCategory('all')">
+                All Products
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- PRODUCTS SECTION -->
+    <section class="products-section" id="products">
+
+        <h2>Our Products</h2>
+
+        <p class="section-description">
+            Explore our latest collection
+        </p>
+
+        <div class="product-grid" id="productsContainer">
+            Loading products...
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <h2>ShopSphere</h2>
+
+        <p>Your shopping destination, all in one place.</p>
+
+        <p>© 2026 ShopSphere. All rights reserved.</p>
+
+    </footer>
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>
